@@ -15,6 +15,14 @@ class App extends Component {
     };
   }
 
+  handleMarkerClick = (marker) => {
+    console.log(marker);
+    marker.isOpen = true;
+    this.setState({
+      markers: Object.assign(this.state.markers, marker)
+    });
+  }
+
   componentDidMount() {
     FourSquareAPI.search({
       near: "Houston, TX",
@@ -26,8 +34,8 @@ class App extends Component {
       const {center} = results.response.geocode.feature.geometry;
       const markers = venues.map((venue) => {
         return {
-          lat: venue.location.lat,
-          lng: venue.location.lng,
+          lat: parseFloat(venue.location.lat),
+          lng: parseFloat(venue.location.lng),
           isOpen: false,
           isVisible: true
         }
@@ -44,7 +52,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Map {...this.state} />
+        <Map {...this.state} handleMarkerClick={this.handleMarkerClick} />
       </div>
     );
   }
