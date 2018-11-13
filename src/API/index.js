@@ -27,7 +27,7 @@ class Helper {
 			method,
 			headers: Helper.headers()
 		};
-		return fetch(`${Helper.baseURL()}${endPoint}?${Helper.auth()}&${Helper.urlBuilder(urlParams)}`)
+		return fetch(`${Helper.baseURL()}${endPoint}?${Helper.auth()}&${Helper.urlBuilder(urlParams)}`, requestData)
 		.then(resp => resp.json());
 	}
 }
