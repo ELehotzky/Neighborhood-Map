@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
-const mykey = `${process.env.REACT_APP_API_KEY}`;
-const apiKey = `https://maps.googleapis.com/maps/api/js?v=3.exp&key=${mykey}`
 
 const MyMapComponent = withScriptjs(withGoogleMap((props) =>
   <GoogleMap
@@ -14,12 +12,11 @@ const MyMapComponent = withScriptjs(withGoogleMap((props) =>
 ))
 
 export default class Map extends Component {
-// hid API key with https://stackoverflow.com/questions/48699820/how-do-i-hide-api-key-in-create-react-app
   render() {
     return (
         <MyMapComponent
           isMarkerShown
-          googleMapURL={apiKey}
+          googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyAwz8Q-Z1qgP-D5S7I6yeQqABmK7wpT5vU"
           loadingElement={<div style={{ height: `100%` }} />}
           containerElement={<div style={{ height: `400px` }} />}
           mapElement={<div style={{ height: `100%` }} />}
