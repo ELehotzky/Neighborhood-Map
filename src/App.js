@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Map from "./components/Map.js";
 import FourSquareAPI from "./API/";
+import Sidebar from "./components/Sidebar.js";
 
 class App extends Component {
 
@@ -42,6 +43,10 @@ class App extends Component {
     })
   }
 
+  handleVenueClick = (venue) => {
+    console.log(venue)
+  }
+
   componentDidMount() {
     FourSquareAPI.search({
       near: "Houston, TX",
@@ -71,6 +76,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Sidebar {...this.state} handleVenueClick={this.handleVenueClick} />
         <Map {...this.state} handleMarkerClick={this.handleMarkerClick} />
       </div>
     );

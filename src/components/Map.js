@@ -19,7 +19,7 @@ const MyMapComponent = withScriptjs(withGoogleMap((props) => (
         {marker.isOpen && venueInfo.bestPhoto && (
           <InfoWindow>
             <React.Fragment>
-              <img alt={"Picture of Venue"} src={`${venueInfo.bestPhoto.prefix}150x150${venueInfo.bestPhoto.suffix}`} />
+              <img alt={"Front of Venue"} src={`${venueInfo.bestPhoto.prefix}150x150${venueInfo.bestPhoto.suffix}`} />
               <p>{venueInfo.name}</p>
             </React.Fragment>
         </InfoWindow>
@@ -38,7 +38,7 @@ export default class Map extends Component {
           isMarkerShown
           googleMapURL={apiKey}
           loadingElement={<div style={{ height: `100%` }} />}
-          containerElement={<div style={{ height: `400px` }} />}
+          containerElement={<div style={{ height: `100%`, width: `70%` }} />}
           mapElement={<div style={{ height: `100%` }} />}
         />
       )
