@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Venues from "./Venues.js";
 
+// Side menu and dynamic search bar
+
 export default class Sidebar extends Component {
 
 	constructor() {
@@ -10,7 +12,6 @@ export default class Sidebar extends Component {
 			venues: []
 		}
 	}
-
 
 	handleSearch = () => {
 		if (this.state.search.trim() !== "") {
