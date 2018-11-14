@@ -31,6 +31,15 @@ class App extends Component {
     this.setState({
       markers: Object.assign(this.state.markers, marker)
     });
+    const venue = this.state.venues.find((venue) => venue.id === marker.id);
+    FourSquareAPI.getVenueDetails(marker.id)
+      .then(resp => {
+        const newVenue = Object.assign(venue, resp.response.venue);
+        this.setState({
+          venues: Object.assign(this.state.venues, newVenue)
+        });
+        console.log(newVenue)
+    })
   }
 
   componentDidMount() {
@@ -47,7 +56,8 @@ class App extends Component {
           lat: parseFloat(venue.location.lat),
           lng: parseFloat(venue.location.lng),
           isOpen: false,
-          isVisible: true
+          isVisible: true,
+          id: venue.id
         }
       });
       this.setState({
@@ -55,7 +65,6 @@ class App extends Component {
         center,
         markers
       })
-      console.log(results)
     })
   }
 
