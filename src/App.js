@@ -44,7 +44,8 @@ class App extends Component {
   }
 
   handleVenueClick = (venue) => {
-    console.log(venue)
+    const marker = this.state.markers.find((marker) => marker.id === venue.id);
+    this.handleMarkerClick(marker);
   }
 
   componentDidMount() {
