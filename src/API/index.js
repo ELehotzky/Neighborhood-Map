@@ -1,3 +1,5 @@
+// Handles fetching from FourSquare API
+
 class Helper {
 	static baseURL() {
 		return "https://api.foursquare.com/v2";

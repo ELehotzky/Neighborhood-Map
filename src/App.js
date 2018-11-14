@@ -42,7 +42,6 @@ class App extends Component {
         this.setState({
           venues: Object.assign(this.state.venues, newVenue)
         });
-        console.log(newVenue)
     })
   }
 
@@ -55,7 +54,7 @@ class App extends Component {
     FourSquareAPI.search({
       near: "Houston, TX",
       query: "sushi", 
-      limit: 10
+      limit: 20
     })
     .then(results => {
       const {venues} = results.response;

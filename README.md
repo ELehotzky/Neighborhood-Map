@@ -1,44 +1,25 @@
+**Houston Heights Neighborhood Sushi-Finder Map**
+====================================
+Udacity FEND Project 7
+
+*About*
+=======
+-This is an app designed for residents of the Greater Houston Heights to search for nearby sushi restaurants. 
+
+*Get Started*
+=============
+-After downloading the code, install and start with "npm install && npm start" in your terminal. The browser should open directly for you to the main page (http://localhost:3000). 
+
+-Once you're in, the map will automatically center around the Houston Heights neighborhood. You can drag the map to scroll around and see different sushi restaurants, clicking on their map markers for an image and their name. 
+
+-The Search box to the upper left-hand corner will allow you to filter through the restaurants by their name. It's dynamic, and will filter through the results as you type. If you find that you've typed something in and there's a result in the sidebar but you don't see a marker for it on the screen, you can click the entry in the sidebar and it will automatically pull the map and select that marker for you (give it a try by typing in "miyako").
+
+-You can clear results by backspacing in the search venue box, or completely clear with the "x" that will appear to the right if there is any input in the box.
+
+*Dependencies*
+==============
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+This project uses Google Maps API (https://developers.google.com/maps/documentation/), and FourSquare Places API (https://developer.foursquare.com/docs).
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+This app was built with minimal HTML/CSS.
